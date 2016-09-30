@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry
+        location="src/main/resources/lib/mysql-connector-java-5.1.6.jar" />
+    <context id="ORACLETables" targetRuntime="Ibatis2Java5">
+    
+		<!-- 数据库配置  -->  
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+			connectionURL="jdbc:mysql://125.210.141.30/galaxy?useUnicode=true&amp;characterEncoding=GBK" 
+			userId="admin" 
+			password="Hello1234">   
+		</jdbcConnection>  
+		
+		
+        <javaModelGenerator targetPackage="com.wasu.pokeface.model"
+            targetProject="src/main/java/" />
+        <sqlMapGenerator targetPackage="mapper/"
+            targetProject="src/main/resources/" />
+        <javaClientGenerator targetPackage="com.wasu.pokeface.controller"
+            targetProject="src/main/java/" type="XMLMAPPER" />
+        <table schema="galaxy" tableName="chanel_item" />
+    </context>
+</generatorConfiguration>
